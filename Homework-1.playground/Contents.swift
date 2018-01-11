@@ -27,6 +27,7 @@ var total: Int = 0
 
 // Your Swift code for question 2 here:
 
+
 /*:
  ---
 ## 3. Mean
