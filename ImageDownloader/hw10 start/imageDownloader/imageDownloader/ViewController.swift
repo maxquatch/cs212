@@ -40,14 +40,12 @@ class ViewController: UIViewController {
             // then print it and set displayImage to nil
             
             
-            // Process the data with an if-let. Create a UIImage
+            // Process the data with an if-let. Try to create a UIImage
             // from the data
-            if let imageData = data {
-               displayImage = UIImage(data: imageData)
-            }
+ 
             
             // Pass this line back to the main thread
-            // set self.theImage.image using displayImage
+            // set self.theImage.image to displayImage
 
         }
         
