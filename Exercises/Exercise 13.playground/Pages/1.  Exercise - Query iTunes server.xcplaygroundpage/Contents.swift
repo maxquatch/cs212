@@ -28,7 +28,7 @@ PlaygroundPage.current.needsIndefiniteExecution = true
 
 
 /*:
- 3.  Review the [iTunes API documentation](https://developer.apple.com/library/content/documentation/AudioVideo/Conceptual/iTuneSearchAPI/Searching.html).  Create a query to get iTunes data for one of your favorite songs
+ 3.  Review the [iTunes API documentation](https://developer.apple.com/library/content/documentation/AudioVideo/Conceptual/iTuneSearchAPI/Searching.html).  Create a query to get iTunes data for one of your favorite songs and print it out to the debug area.
  */
 
 
