@@ -88,12 +88,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Album" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="anh-mQ-OJc">
+                                <rect key="frame" x="25" y="207" width="334" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="lcb-M3-CaH"/>
                     </view>
                     <navigationItem key="navigationItem" title="Now Playing" id="UAs-Ks-udn"/>
                     <connections>
+                        <outlet property="albumLabel" destination="anh-mQ-OJc" id="4kJ-4I-DzX"/>
                         <outlet property="artistLabel" destination="pll-Y6-apY" id="vIh-gv-wIS"/>
                         <outlet property="trackLabel" destination="gdh-n2-oau" id="Ctl-RH-oFk"/>
                     </connections>

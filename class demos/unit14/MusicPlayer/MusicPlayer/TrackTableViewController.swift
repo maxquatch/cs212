@@ -67,7 +67,7 @@ class TrackTableViewController: UITableViewController, UISearchBarDelegate {
     
     // MARK: - Search Bar Delegate
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        print("searchBarSearchButtonClicked with \(searchBar.text)")
+        print("searchBarSearchButtonClicked")
         if let searchTerm = searchBar.text {
             search(term: searchTerm)
         }

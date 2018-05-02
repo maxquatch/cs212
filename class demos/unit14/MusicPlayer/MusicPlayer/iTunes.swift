@@ -22,16 +22,18 @@ let itunesBaseURL = URL(string: "https://itunes.apple.com/search")!
 
 // struct to hold one track of data from iTunes server
 struct Track: Codable {
-    let artist: String
-    let track: String
-    let artwork: String
-    let previewURL: String
+    let artist: String?
+    let track: String?
+    let artwork: String?
+    let previewURL: String?
+    let collectionName: String?
     
     enum CodingKeys: String, CodingKey {
         case artist = "artistName"
         case track = "trackName"
         case artwork = "artworkUrl60"
         case previewURL = "previewUrl"
+        case collectionName = "collectionName"
     }
 }
 
