@@ -4,6 +4,8 @@
  Create a closure assigned to a constant `blankClosure` that has no parameters and no return value.  It's up to you what to put inside of it, a print statement is a good choice.
  */
 
+
+
 /*:
   Create a closure assigned to a constant `fourClosure` that has no parameters and returns an `Int`.  The body of the closure should always return the value 4. Call the closure two times.  When you call it, make sure you can see that it evaluates to the value 4.
  */
