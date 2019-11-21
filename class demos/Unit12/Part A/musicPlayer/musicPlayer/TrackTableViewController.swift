@@ -10,8 +10,7 @@ import UIKit
 
 class TrackTableViewController: UITableViewController, UISearchBarDelegate   {
 
-    // saves what the user searches for
-    var searchTerm: String?
+    // property to store tracks returned from iTunes
     var tracks = [Track]()
     
     override func viewDidLoad() {
@@ -25,8 +24,6 @@ class TrackTableViewController: UITableViewController, UISearchBarDelegate   {
     }
 
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        print("searchBar search button clicked")
-        searchTerm = searchBar.text
         if let text = searchBar.text {
             print("searchbar text: \(text)")
             search(search: text)
@@ -44,25 +41,20 @@ class TrackTableViewController: UITableViewController, UISearchBarDelegate   {
             }
             
             if let data = data {
+                // try to do the JSON decode.  if it works, update the search results and reload the table view
                 let jsonDecoder = JSONDecoder()
-                
-                let results = try? jsonDecoder.decode(Results.self, from: data)
-                
-                if let results = results {
-                    self.tracks = results.results
-                }
-                
-                //print(self.tracks)
-                print(self.tracks.count)
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
+                if let searchResults = try? jsonDecoder.decode(Results.self, from: data) {
+                    self.tracks = searchResults.results
+                    print("we got \(self.tracks.count) tracks back from iTunes search")
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
+                } else {
+                    print("we didn't get any tracks back from iTunes search")
                 }
             }
-}
-        
+        }
         task.resume()
-
-        
     }
     // MARK: - Table view data source
 
