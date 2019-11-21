@@ -21,11 +21,12 @@ extension URL {
 let itunesBaseURL = URL(string: "https://itunes.apple.com/search")!
 
 // struct to hold one track of data from iTunes server
+// make them all optional in case one is missing from iTunes search results
 struct Track: Codable {
-    let artist: String
-    let track: String
-    let artwork: String
-    let previewUrl: String
+    let artist: String?
+    let track: String?
+    let artwork: String?
+    let previewUrl: String?
     
     enum CodingKeys: String, CodingKey {
         case artist = "artistName"
